@@ -32,7 +32,7 @@ class CommunicationSystem(val numberOfLines: Int, private val messageGenerator: 
 
     fun getMessage(lineNumber: Int): Message? {
         if (lineNumber > numberOfLines || lineNumber < 0)
-            throw IllegalStateException("there is no line that numbered by $lineNumber, available lines: from 0 too $numberOfLines")
+            throw IllegalStateException("there is no line that numbered by $lineNumber, available lines: from 0 to $numberOfLines")
 
         val line = lines[lineNumber]
 
